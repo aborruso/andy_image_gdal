@@ -7,7 +7,7 @@ jobs:
   test-image:
     runs-on: ubuntu-latest
     container:
-      image: ghcr.io/aborruso/andy-image:latest
+      image: ghcr.io/aborruso/andy_image_gdal:latest
 
     steps:
       - name: Check Python version
