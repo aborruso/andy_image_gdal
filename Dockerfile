@@ -1,3 +1,4 @@
+# Dummy change to trigger new build
 # Dockerfile for andy_image_gdal
 # Base image with GDAL and its drivers pre-installed
 FROM ghcr.io/osgeo/gdal:ubuntu-full-latest
