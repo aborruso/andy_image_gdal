@@ -28,39 +28,46 @@ docker run -it ghcr.io/aborruso/andy_image_gdal:latest /bin/bash
 
 Once inside the container, you can use the pre-installed tools:
 
-*   **GDAL/OGR**: For geospatial data processing.
+* **GDAL/OGR**: For geospatial data processing.
+
     ```bash
-ogrinfo --version
+    ogrinfo --version
     ```
 
-*   **Python**: With `uv` for package management.
+* **Python**: With `uv` for package management.
+
     ```bash
-python --version
+    python --version
     ```
 
-*   **`scrape-cli`**: For web scraping.
+* **`scrape-cli`**: For web scraping.
+
     ```bash
-scrape --version
+    scrape --version
     ```
 
-*   **`jq`**: For JSON processing.
+* **`jq`**: For JSON processing.
+
     ```bash
-jq --version
+    jq --version
     ```
 
-*   **`duckdb`**: For in-process SQL OLAP database.
+* **`duckdb`**: For in-process SQL OLAP database.
+
     ```bash
-duckdb --version
+    duckdb --version
     ```
 
-*   **`xan`**: A command-line tool for data manipulation.
+* **`xan`**: A command-line tool for data manipulation.
+
     ```bash
-xan --help
+    xan --help
     ```
 
-*   **AWS CLI v2**: For interacting with AWS services.
+* **AWS CLI v2**: For interacting with AWS services.
+
     ```bash
-aws --version
+    aws --version
     ```
 
 ### 3. Mount Local Volumes (Optional)
