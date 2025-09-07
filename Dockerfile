@@ -29,7 +29,7 @@ RUN uv tool install scrape-cli \
     && uv tool install visidata
 
 # Shared Python libraries (GDAL is already in the base image)
-RUN pip install \
+RUN uv pip install \
     requests beautifulsoup4 playwright==1.44.0 requests-aws4auth
 
 # Working directory
