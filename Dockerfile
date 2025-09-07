@@ -39,7 +39,6 @@ WORKDIR /workspace
 # Check if Node.js is already in the base GDAL image. If not, this is needed.
 # Assuming it's not, or we want a specific version from NodeSource.
 RUN apt-get update \
-    && apt-get install -y curl \
     && curl -fsSL https://deb.nodesource.com/setup_20.x | bash - \
     && apt-get install -y nodejs \
     && npm install -g puppeteer playwright \
