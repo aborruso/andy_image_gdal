@@ -12,7 +12,7 @@ ENV PATH="/root/.local/bin:${PATH}"
 # Note: Some of these might already be in the base GDAL image, but re-installing is safe.
 # We'll remove redundant ones if they cause issues or significantly increase size.
 RUN apt-get update && apt-get install -y --no-install-recommends \
-    chromium curl wget jq miller xmlstarlet git build-essential \
+    chromium curl wget jq miller xmlstarlet git build-essential unzip \
     && rm -rf /var/lib/apt/lists/*
 
 # Configure git for CI/CD environments
@@ -44,6 +44,12 @@ RUN apt-get update \
     && apt-get install -y nodejs \
     && npm install -g puppeteer playwright \
     && rm -rf /var/lib/apt/lists/*
+
+# Install AWS CLI v2
+RUN curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip" \
+    && unzip awscliv2.zip \
+    && ./aws/install \
+    && rm -rf awscliv2.zip aws
 
 # Install duckdb
 RUN curl https://install.duckdb.org | sh
