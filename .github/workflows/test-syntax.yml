@@ -1,0 +1,13 @@
+name: Test Workflow Syntax
+
+on:
+  push:
+    branches: ["*"]
+  workflow_dispatch:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Test step
+        run: echo "This is a test to verify workflow execution"
